@@ -1,0 +1,6 @@
+//Para crear un controlador
+php artisan make:controller SaludoController
+//Para crear un controlador
+php artisan make:model Juego
+//Para ver las rutas
+php artisan route:list
