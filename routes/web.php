@@ -27,7 +27,9 @@ Route::get('saludo', function () {
     return view('saludo');
 });
 
-Route::get('saludo','saludocontroller@saludo');*/
+Route::get('saludo','saludocontroller@saludo');
+
+*/
 Route::get('saludo/{nombre}/{edad?}','Controller@saludar');
 Route::get('localiza','Controller@localiza');
 Route::get('contacto','Controller@contacto');
