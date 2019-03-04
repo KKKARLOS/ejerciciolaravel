@@ -7,11 +7,16 @@
 <body>
 	<strong>Productos</strong></br></br>
 	@isset($numero)
-			<h3>{{$mensaje}}</h3>
-	@else
 			@for ($i = 1; $i <= $numero; $i++)	
-				Producto{{$i}}</br>		
-			@endfor	
+				Producto{{$i}}
+       			@if ($premio==$i) &nbsp;premiado
+       			@endif
+			</br>	
+
+			@endfor		
+
+	@else
+			<h3>No hay productos</h3>
 	@endif
 </body>
 </html>

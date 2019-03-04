@@ -96,6 +96,8 @@ class Controller extends BaseController
         return view('juego')->with('mensaje',$mensaje)->with('numero',$numero)->with('premio',$premio);
     } 
     public function cargarProductos($numero=null){
-        return view('productos')->with('numero',$numero);
+        if ($numero==null)  return view('productos')->with('numero',$numero);
+        $premio = rand(1,$numero);
+        return view('productos')->with('numero',$numero)->with('premio',$premio);
     }
 }
