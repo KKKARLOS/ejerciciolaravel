@@ -7,6 +7,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\Juego;
+use App\Producto;
 
 class Controller extends BaseController
 {
@@ -99,5 +100,11 @@ class Controller extends BaseController
         if ($numero==null)  return view('productos')->with('numero',$numero);
         $premio = rand(1,$numero);
         return view('productos')->with('numero',$numero)->with('premio',$premio);
+    }
+    public function obtenerProductos($numero=null){
+        if ($numero==null)  return view('productos')->with('numero',$numero);
+        $oProducto = new Producto();
+        $oProducto->obtenerCuenta($numero);
+        return view('productos')->with('producto',$oProducto);
     }
 }

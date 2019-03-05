@@ -33,5 +33,6 @@ Route::get('saludo','saludocontroller@saludo');
 Route::get('saludo/{nombre}/{edad?}','Controller@saludar');
 Route::get('localiza','Controller@localiza');
 Route::get('contacto','Controller@contacto');
-Route::get('productos/{numero?}', 'Controller@cargarProductos');
+/*Route::get('productos/{numero?}', 'Controller@cargarProductos');*/
+Route::get('productos/{numero?}', 'Controller@obtenerProductos');
 Route::get('juego/{numero?}','Controller@juego')->name("jugar")->where('numero','[1-3]');
