@@ -35,4 +35,8 @@ Route::get('localiza','Controller@localiza');
 Route::get('contacto','Controller@contacto');
 /*Route::get('productos/{numero?}', 'Controller@cargarProductos');*/
 Route::get('productos/{numero?}', 'Controller@obtenerProductos');
+/*Route::get('detalleProducto/{numero?}',  function () {
+    return view('detalleProducto');
+});*/
+Route::get('detalleProducto/{numero?}', 'Controller@detalleProducto');
 Route::get('juego/{numero?}','Controller@juego')->name("jugar")->where('numero','[1-3]');

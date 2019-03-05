@@ -105,6 +105,10 @@ class Controller extends BaseController
         if ($numero==null)  return view('productos')->with('numero',$numero);
         $oProducto = new Producto();
         $oProducto->obtenerCuenta($numero);
+        //dd($oProducto);
         return view('productos')->with('producto',$oProducto);
+    }
+    public function detalleProducto($numero=null){
+         return view('detalleProducto')->with('numero',$numero);
     }
 }

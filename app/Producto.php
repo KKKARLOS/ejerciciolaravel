@@ -20,6 +20,7 @@ class Producto extends Model
         //return rand(1,$numero);
   		$this->numero=$numero;
 		$this->premio=rand(1,$numero); 
-		$this->unidades=rand(1,20);     
+		$this->unidades=rand(1,20); 
+        //dd($this);    
     } 
 }
